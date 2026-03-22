@@ -15,14 +15,15 @@ services:
     security_opt:
       - seccomp=unconfined
 
-    # ── Hardware protection: RAM-backed fuzzing I/O ──────────────
+    # ── Hardware protection: RAM-backed corpus I/O ───────────────
+    # corpus만 tmpfs (SSD 보호) — crashes는 호스트에 영속 저장
     tmpfs:
       - /app/workspace/corpus:size=512m
-      - /app/workspace/crashes:size=256m
 
     volumes:
       - ./scripts:/app/scripts
       - ./workspace:/app/workspace
+      - ./dicts:/app/dicts:ro
 
     stdin_open: true
     tty: true

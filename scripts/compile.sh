@@ -15,8 +15,8 @@ clang++ \
     "-I${ICU_HOME}/include" \
     "$SRC" \
     "-L${ICU_HOME}/lib" \
-    -licuuc -licui18n -licudata \
-    -lstdc++ -lm \
+    -licui18n -licuuc -licudata \
+    -lstdc++ -lm -lpthread -ldl \
     -Wl,-rpath,"${ICU_HOME}/lib" \
     -o "$OUT"
 

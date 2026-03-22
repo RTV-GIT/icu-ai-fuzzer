@@ -1,6 +1,14 @@
+# Fuzzing artifacts (binary, volatile, or sensitive)
 workspace/corpus/
+workspace/corpus_backup/
 workspace/crashes/
 workspace/harnesses/
 workspace/reports/
+workspace/findings/
+
+# Python
 __pycache__/
 *.pyc
+
+# Environment
+.env

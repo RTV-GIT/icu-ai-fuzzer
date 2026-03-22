@@ -1,0 +1,40 @@
+# MBCS codec magic bytes
+
+# Shift_JIS lead bytes
+sjis_lead_low="\x81"
+sjis_lead_mid="\x9f"
+sjis_lead_high="\xe0"
+sjis_lead_max="\xef"
+sjis_kana_start="\xa1"
+sjis_kana_end="\xdf"
+
+# EUC-JP
+eucjp_ss2="\x8e"
+eucjp_ss3="\x8f"
+eucjp_lead_start="\xa1"
+eucjp_lead_end="\xfe"
+
+# GB18030 four-byte
+gb18030_4byte="\x81\x30\x81\x30"
+gb18030_4byte_max="\x84\x31\xa4\x39"
+gb_lead_start="\xa1"
+gb_lead_end="\xf7"
+
+# Big5
+big5_lead_start="\xa1"
+big5_lead_end="\xf9"
+big5_trail_low="\x40"
+big5_trail_high="\x7e"
+
+# Codec names
+kw_sjis="Shift_JIS"
+kw_eucjp="EUC-JP"
+kw_euckr="EUC-KR"
+kw_gb2312="GB2312"
+kw_gb18030="GB18030"
+kw_big5="Big5"
+
+# BOM signatures
+bom_utf8="\xef\xbb\xbf"
+bom_utf16be="\xfe\xff"
+bom_utf16le="\xff\xfe"

@@ -1,0 +1,30 @@
+# SCSU / UTF-7 / BOCU-1 command bytes
+
+# SCSU Single-byte mode commands
+scsu_sq0="\x01"
+scsu_sq7="\x08"
+scsu_sdx="\x0b"
+scsu_reserved="\x0c"
+scsu_squ="\x0e"
+scsu_scu="\x0f"
+scsu_sc0="\x10"
+scsu_sc7="\x17"
+scsu_sd0="\x18"
+scsu_sd7="\x1f"
+
+# SCSU Unicode mode commands
+scsu_uc0="\xe0"
+scsu_uc7="\xe7"
+scsu_ud0="\xe8"
+scsu_ud7="\xef"
+scsu_uqu="\xf0"
+scsu_udx="\xf1"
+scsu_urs="\xf2"
+
+# UTF-7
+utf7_shift="\x2b"
+utf7_unshift="\x2d"
+utf7_bom="\x2b\x2f\x76"
+
+# BOCU-1
+bocu_reset="\xff"

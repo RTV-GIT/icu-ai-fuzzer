@@ -1,0 +1,45 @@
+# ISO-2022 escape sequences and state transitions
+
+# ESC byte
+esc="\x1b"
+
+# ISO-2022-JP designations
+esc_ascii="\x1b\x28\x42"
+esc_jisx201_roman="\x1b\x28\x4a"
+esc_jisx201_kana="\x1b\x28\x49"
+esc_jisx208_1="\x1b\x24\x42"
+esc_jisx208_2="\x1b\x24\x40"
+esc_jisx212="\x1b\x24\x28\x44"
+
+# ISO-2022-JP-2 extras
+esc_8859_1="\x1b\x2e\x41"
+esc_8859_7="\x1b\x2e\x46"
+esc_gb2312="\x1b\x24\x41"
+esc_ksc5601="\x1b\x24\x28\x43"
+
+# ISO-2022-KR
+esc_kr_designate="\x1b\x24\x29\x43"
+
+# ISO-2022-CN
+esc_cn_gb2312="\x1b\x24\x29\x41"
+esc_cn_cns11643_1="\x1b\x24\x29\x47"
+esc_cn_cns11643_2="\x1b\x24\x2a\x48"
+
+# Shift In / Shift Out
+si="\x0f"
+so="\x0e"
+
+# Single Shift
+ss2="\x1b\x4e"
+ss3="\x1b\x4f"
+
+# UTF-8 designation
+esc_utf8="\x1b\x25\x42"
+
+# Common controls
+cr="\x0d"
+lf="\x0a"
+
+# DBCS byte ranges
+lead_high="\xa1"
+lead_max="\xfe"

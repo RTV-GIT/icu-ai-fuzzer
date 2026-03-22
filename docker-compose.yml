@@ -1,0 +1,28 @@
+services:
+  fuzzer:
+    build: 
+      context: .
+      network: host
+    container_name: icu-ai-fuzzer
+    environment:
+      - ICU_HOME=/opt/icu-install
+      - ICU_SRC=/opt/icu-src
+      - ASAN_OPTIONS=abort_on_error=1:symbolize=1:detect_leaks=0
+
+    # ── Security: allow GDB/ptrace inside container ──────────────
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp=unconfined
+
+    # ── Hardware protection: RAM-backed fuzzing I/O ──────────────
+    tmpfs:
+      - /app/workspace/corpus:size=512m
+      - /app/workspace/crashes:size=256m
+
+    volumes:
+      - ./scripts:/app/scripts
+      - ./workspace:/app/workspace
+
+    stdin_open: true
+    tty: true

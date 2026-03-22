@@ -1,0 +1,6 @@
+workspace/corpus/
+workspace/crashes/
+workspace/harnesses/
+workspace/reports/
+__pycache__/
+*.pyc

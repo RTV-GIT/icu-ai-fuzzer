@@ -1,0 +1,49 @@
+# Surrogate-focused dictionary for uregex
+# UChar (16-bit LE) surrogate values
+
+# High surrogates (D800-DBFF)
+sur_d800="\x00\xd8"
+sur_d801="\x01\xd8"
+sur_d83d="\x3d\xd8"
+sur_dbff="\xff\xdb"
+
+# Low surrogates (DC00-DFFF)
+sur_dc00="\x00\xdc"
+sur_dc01="\x01\xdc"
+sur_de00="\x00\xde"
+sur_dfff="\xff\xdf"
+
+# Surrogate pairs
+pair_emoji="\x3d\xd8\x00\xde"
+pair_min="\x00\xd8\x00\xdc"
+pair_max="\xff\xdb\xff\xdf"
+
+# Orphaned surrogates mixed with ASCII
+orphan_lead_a="\x00\xd8\x41\x00"
+orphan_trail_a="\x00\xdc\x41\x00"
+
+# Regex metacharacters as UChar
+dot="\x2e\x00"
+star="\x2a\x00"
+plus="\x2b\x00"
+question="\x3f\x00"
+pipe="\x7c\x00"
+paren_open="\x28\x00"
+paren_close="\x29\x00"
+bracket_open="\x5b\x00"
+bracket_close="\x5d\x00"
+caret="\x5e\x00"
+dollar="\x24\x00"
+backslash="\x5c\x00"
+b_char="\x62\x00"
+
+# Lookbehind
+lookbehind_pos="\x28\x00\x3f\x00\x3c\x00\x3d\x00"
+lookbehind_neg="\x28\x00\x3f\x00\x3c\x00\x21\x00"
+
+# Word boundary
+word_boundary="\x5c\x00\x62\x00"
+
+# CRLF
+cr="\x0d\x00"
+lf="\x0a\x00"
